@@ -62,6 +62,18 @@ The system uses a **3-tier architecture**:
 
 ---
 
++-------------------+ HTTPS / REST API +-----------------------+
+| Python Client | <------------------------> | Oracle APEX Server |
+| (Tkinter GUI) | | (Admin & APIs) |
++-------------------+ +-----------------------+
+|
+| SQL/PLSQL
+v
++-----------------------+
+| Oracle Database |
+| (Data Layer) |
++-----------------------+
+
 ## ✨ Features
 
 ### **Admin Portal (Oracle APEX)**
@@ -107,23 +119,48 @@ BASE_URL = "https://your-apex-instance/ords/techinnovators/"
 # Run client
 python main.py
 
-📖 Usage
+## 📖 Usage
 
-Admins: Use APEX to manage inventory, approve checkouts, and view analytics.
+### For Administrators
+- Log into the **Oracle APEX application**.  
+- Manage inventory (add, update, remove items).  
+- Approve checkouts and track equipment usage.  
+- View reports and analytics dashboards.  
 
-Employees: Use the Python client to log in, view equipment, and scan QR codes for returns.
+### For Employees
+- Launch the **Python desktop client**.  
+- Log in with your **Employee ID**.  
+- View your current and past checked-out equipment.  
+- Return items quickly by scanning your **QR code**.  
 
-Full details: User Manual
+📘 For full details, see the [User Manual](Documentation/User_Manual.pdf).
 
-🤝 Contributing
 
-This project was developed as part of a university assignment and is not open for public contributions.
-However, feel free to fork and adapt it for personal use.
+## 🤝 Contributing
 
-📜 License
+Contributions are welcome!  
+If you'd like to help improve this project, please follow these steps:
 
-This project was created for educational purposes as part of the IFS325 course at the University of the Western Cape.
+1. **Fork** the repository.  
+2. Create a new branch:  
+   ```bash
+   git checkout -b feature/your-feature-name
 
-Developer: Alyssa Krishna
-Course: IFS325 - Advanced Computing
-Date: September 2025
+
+## 📜 License
+
+This project was created for **educational purposes** as part of the  
+**IFS325 - Advanced Computing** course at the **University of the Western Cape**.  
+
+You are free to **fork and adapt** the project for personal or learning use,  
+but it is **not intended for commercial deployment**.  
+
+---
+
+**Developer:** Alyssa Krishna  
+**Course:** IFS325 - Advanced Computing  
+**University:** University of the Western Cape  
+**Date:** September 2025  
+
+![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)
+
